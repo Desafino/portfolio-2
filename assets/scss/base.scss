@@ -1,0 +1,109 @@
+@import "mixin.scss";
+
+/*全ての要素にborder-boxを適用*/
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  font: inherit;
+  color: inherit;
+}
+
+html {
+  font-family: YuMincho, "游明朝体", Yu Mincho, "游明朝", "微软雅黑", "宋体",
+    serif;
+  font-size: 62.5%;
+}
+
+body {
+  @include fCol(center, center);
+  margin: initial;
+  padding: initial;
+  position: relative;
+  //opacity: 0;
+}
+
+/*テキスト系*/
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: initial;
+  letter-spacing: 0.3rem;
+}
+
+h1 {
+  font-size: clamp(3.2rem, 3vw, 3.6rem);
+  line-height: clamp(3rem, 3vw, 4.5rem);
+  font-weight: 600;
+  color: $prime;
+  margin-top: initial;
+}
+
+h2 {
+  font-size: clamp(3rem, 3vw, 3.2rem);
+  line-height: clamp(3rem, 3vw, 4.5rem);
+  font-weight: 600;
+  color: $gray;
+  margin-top: initial;
+}
+
+h3 {
+  font-size: clamp(2.2rem, 3vw, 2.4rem);
+  font-weight: 600;
+  color: $prime;
+  border-bottom: $prime solid 2px;
+}
+
+.sec-title {
+  margin-bottom: 5rem;
+  text-align: center;
+  h3 {
+    color: $gray;
+    padding: 0 1rem;
+    margin-bottom: 0.5rem;
+  }
+  p.sub {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: $prime;
+    text-align: center;
+  }
+}
+
+h4 {
+  font-size: clamp(1.6rem, 3vw, 1.8rem);
+  line-height: clamp(3rem, 3vw, 4.5rem);
+  font-weight: 600;
+  color: $gray;
+  margin-top: initial;
+}
+
+p {
+  font-size: #{"clamp(1.4rem, 1.36rem + 0.2vw, 1.6rem)"};
+  font-weight: 400;
+  color: $gray;
+  margin: initial;
+}
+
+a {
+  text-decoration: none;
+  color: red;
+  transition: all ease-in-out 0.5s;
+  &:hover {
+    color: $yellow;
+  }
+}
+
+ul,
+ol {
+  list-style-type: none;
+  padding-inline-start: 1em;
+}
+
+/*画像系*/
+img {
+  max-width: 100%;
+}

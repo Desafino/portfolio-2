@@ -1,0 +1,80 @@
+@import "mixin.scss";
+
+#hero {
+  @include fCol(center, center);
+  width: 100vw;
+  max-width: 100%;
+  height: 100vh;
+  max-height: 100%;
+  background-color: $tres;
+}
+
+#web {
+  @include fCol(center, center);
+  width: 100%;
+  height: 100%;
+}
+
+#illustration {
+  @include fCol(center, center);
+  width: 100%;
+  height: 100%;
+}
+
+#video {
+  @include fCol(center, center);
+  width: 100%;
+  height: 100%;
+}
+
+#other {
+  @include fCol(center, center);
+  width: 100%;
+  height: 100%;
+}
+
+.section-wrap {
+  width: 100%;
+  .menu-band {
+    width: 100%;
+    height: 45px;
+    min-height: 45px;
+    text-align: center;
+    background-color: $white;
+    border: $prime solid 2px;
+    cursor: pointer;
+    position: relative;
+    @include fRow(center, center);
+    transition: all ease-in-out 0.45s;
+    z-index: 30;
+    position: sticky;
+    top: 0;
+    h5 {
+      font-size: #{"clamp(1.6rem, 1.56rem + 0.2vw, 1.8rem)"};
+      font-weight: 500;
+      color: $prime;
+    }
+    &:hover {
+      background-color: $prime;
+      h5 {
+        color: $white;
+      }
+    }
+  }
+
+  .p-cont {
+    @include fCol(center, center);
+    width: 100vw;
+    max-width: 100%;
+    height: 0vh;
+    max-height: 0%;
+    background-color: $tres;
+    border-left: $prime solid 2px;
+    border-right: $prime solid 2px;
+    transition: all ease-in-out 0.45s;
+    .active {
+      height: 100vh;
+      max-height: 100%;
+    }
+  }
+}

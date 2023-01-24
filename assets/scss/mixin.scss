@@ -1,0 +1,47 @@
+@import "global.scss";
+
+//メディアクエリ
+
+@mixin tabPro {
+  @media screen and (max-width: ($tab-pro)) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media screen and (max-width: ($tab)) {
+    @content;
+  }
+}
+
+@mixin sp {
+  @media screen and (max-width: ($sp)) {
+    @content;
+  }
+}
+
+//flex-box
+@mixin fRow($rowJustify, $rowAlign) {
+  display: flex;
+  flex-direction: row;
+  justify-content: $rowJustify;
+  align-items: $rowAlign;
+}
+
+@mixin fCol($rowJustify, $rowAlign) {
+  display: flex;
+  flex-direction: column;
+  justify-content: $rowJustify;
+  align-items: $rowAlign;
+}
+
+//Width
+@mixin secWidth($min, $max) {
+  width: unquote("min($min, $max)");
+}
+
+//余白系
+
+@mixin secPadding {
+  padding: clamp(1rem, 3vw, 5rem);
+}

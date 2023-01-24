@@ -1,0 +1,114 @@
+@charset "UTF-8";
+/*色*/
+/*背景画像*/
+/*メディアクエリ*/
+/*width*/
+/*全ての要素にborder-boxを適用*/
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  font: inherit;
+  color: inherit;
+}
+
+html {
+  font-family: YuMincho, "游明朝体", Yu Mincho, "游明朝", "微软雅黑", "宋体", serif;
+  font-size: 62.5%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: initial;
+  padding: initial;
+  position: relative;
+}
+
+/*テキスト系*/
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: initial;
+  letter-spacing: 0.3rem;
+}
+
+h1 {
+  font-size: clamp(3.2rem, 3vw, 3.6rem);
+  line-height: clamp(3rem, 3vw, 4.5rem);
+  font-weight: 600;
+  color: #167456;
+  margin-top: initial;
+}
+
+h2 {
+  font-size: clamp(3rem, 3vw, 3.2rem);
+  line-height: clamp(3rem, 3vw, 4.5rem);
+  font-weight: 600;
+  color: #707070;
+  margin-top: initial;
+}
+
+h3 {
+  font-size: clamp(2.2rem, 3vw, 2.4rem);
+  font-weight: 600;
+  color: #167456;
+  border-bottom: #167456 solid 2px;
+}
+
+.sec-title {
+  margin-bottom: 5rem;
+  text-align: center;
+}
+.sec-title h3 {
+  color: #707070;
+  padding: 0 1rem;
+  margin-bottom: 0.5rem;
+}
+.sec-title p.sub {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #167456;
+  text-align: center;
+}
+
+h4 {
+  font-size: clamp(1.6rem, 3vw, 1.8rem);
+  line-height: clamp(3rem, 3vw, 4.5rem);
+  font-weight: 600;
+  color: #707070;
+  margin-top: initial;
+}
+
+p {
+  font-size: clamp(1.4rem, 1.36rem + 0.2vw, 1.6rem);
+  font-weight: 400;
+  color: #707070;
+  margin: initial;
+}
+
+a {
+  text-decoration: none;
+  color: red;
+  transition: all ease-in-out 0.5s;
+}
+a:hover {
+  color: #fff3b8;
+}
+
+ul,
+ol {
+  list-style-type: none;
+  -webkit-padding-start: 1em;
+          padding-inline-start: 1em;
+}
+
+/*画像系*/
+img {
+  max-width: 100%;
+}
+/*# sourceMappingURL=base.css.map */
