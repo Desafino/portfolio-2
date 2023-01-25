@@ -34,14 +34,13 @@ h3,
 h4,
 h5 {
   margin: initial;
-  letter-spacing: 0.3rem;
 }
 
 h1 {
   font-size: clamp(3.2rem, 3vw, 3.6rem);
   line-height: clamp(3rem, 3vw, 4.5rem);
   font-weight: 600;
-  color: #167456;
+  color: #325a8f;
   margin-top: initial;
 }
 
@@ -56,8 +55,8 @@ h2 {
 h3 {
   font-size: clamp(2.2rem, 3vw, 2.4rem);
   font-weight: 600;
-  color: #167456;
-  border-bottom: #167456 solid 2px;
+  color: #325a8f;
+  border-bottom: #325a8f solid 2px;
 }
 
 .sec-title {
@@ -72,7 +71,7 @@ h3 {
 .sec-title p.sub {
   font-size: 1.8rem;
   font-weight: 600;
-  color: #167456;
+  color: #325a8f;
   text-align: center;
 }
 
@@ -97,7 +96,7 @@ a {
   transition: all ease-in-out 0.5s;
 }
 a:hover {
-  color: #fff3b8;
+  color: #f5cb38;
 }
 
 ul,

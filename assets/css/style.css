@@ -42,7 +42,6 @@ h3,
 h4,
 h5 {
   margin: initial;
-  letter-spacing: 0.3rem;
 }
 
 h1 {
@@ -133,9 +132,12 @@ img {
   align-items: center;
   width: 100vw;
   max-width: 100%;
-  height: 100vh;
+  height: calc(100vh - 180px);
   max-height: 100%;
   background-color: #e7ecef;
+  position: sticky;
+  top: 0;
+  z-index: -10;
 }
 
 #web {
@@ -179,22 +181,21 @@ img {
 }
 
 .section-wrap .menu-band {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   height: 45px;
   min-height: 45px;
   text-align: center;
   background-color: #ffffff;
   border: #325a8f solid 2px;
+  border-bottom: none;
   cursor: pointer;
   position: relative;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
   transition: all ease-in-out 0.45s;
   z-index: 30;
-  position: sticky;
-  top: 0;
 }
 
 .section-wrap .menu-band h5 {
@@ -211,6 +212,16 @@ img {
   color: #ffffff;
 }
 
+.section-wrap .menu-band.active {
+  background-color: #325a8f;
+  position: sticky;
+  top: 0;
+}
+
+.section-wrap .menu-band.active h5 {
+  color: #ffffff;
+}
+
 .section-wrap .p-cont {
   display: flex;
   flex-direction: column;
@@ -220,13 +231,229 @@ img {
   max-width: 100%;
   height: 0vh;
   max-height: 0%;
+  padding: 0;
+  opacity: 0;
   background-color: #e7ecef;
   border-left: #325a8f solid 2px;
   border-right: #325a8f solid 2px;
   transition: all ease-in-out 0.45s;
 }
 
-.section-wrap .p-cont .active {
+.section-wrap .p-cont .outer-swipe {
+  position: relative;
+  overflow: hidden;
+}
+
+.section-wrap .p-cont.open {
   height: 100vh;
   max-height: 100%;
+  padding: clamp(1rem, 0.8rem + 1vw, 2rem);
+  opacity: 1;
+}
+
+.section-wrap .p-cont.open .outer-swipe {
+  width: 50%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+}
+
+.section-wrap .p-cont.open .outer-swipe .swiper-wrapper .swiper-slide {
+  width: 100%;
+  max-width: 100%;
+}
+
+.section-wrap .p-cont.open .outer-swipe .swiper-wrapper .swiper-slide .inner {
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+  max-height: 100%;
+}
+
+.section-wrap .p-cont.open .outer-swipe .swiper-wrapper .swiper-slide .inner.web {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.section-wrap .p-cont.open .outer-swipe .swiper-wrapper .swiper-slide .inner.web .inner-img {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 50%;
+  background-color: #ffffff;
+}
+
+.section-wrap .p-cont.open .outer-swipe .swiper-wrapper .swiper-slide .inner.web .inner-img img {
+  max-width: 100%;
+  aspect-ratio: 16 / 9;
+}
+
+@media screen and (max-width: 780px) {
+  .section-wrap .p-cont.open .outer-swipe .swiper-wrapper .swiper-slide .inner.web .inner-img {
+    height: 40%;
+  }
+}
+
+.section-wrap .p-cont.open .outer-swipe .swiper-wrapper .swiper-slide .inner.web .inner-disc {
+  width: 100%;
+  height: 50%;
+  background-color: #ffffff;
+  padding: clamp(0.5rem, 0.44rem + 0.3vw, 0.8rem);
+}
+
+.section-wrap .p-cont.open .outer-swipe .swiper-wrapper .swiper-slide .inner.web .inner-disc h3 {
+  font-size: clamp(1.4rem, 1.36rem + 0.2vw, 1.6rem);
+  font-weight: 500;
+  margin-bottom: clamp(0.5rem, 0.44rem + 0.3vw, 0.8rem);
+}
+
+.section-wrap .p-cont.open .outer-swipe .swiper-wrapper .swiper-slide .inner.web .inner-disc .cap-wrap {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.section-wrap .p-cont.open .outer-swipe .swiper-wrapper .swiper-slide .inner.web .inner-disc .cap-wrap .tech {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  width: 50%;
+  max-width: 100%;
+}
+
+.section-wrap .p-cont.open .outer-swipe .swiper-wrapper .swiper-slide .inner.web .inner-disc .cap-wrap .tech .env,
+.section-wrap .p-cont.open .outer-swipe .swiper-wrapper .swiper-slide .inner.web .inner-disc .cap-wrap .tech .handle {
+  width: 50%;
+  max-width: 100%;
+}
+
+.section-wrap .p-cont.open .outer-swipe .swiper-wrapper .swiper-slide .inner.web .inner-disc .cap-wrap .tech .env h4,
+.section-wrap .p-cont.open .outer-swipe .swiper-wrapper .swiper-slide .inner.web .inner-disc .cap-wrap .tech .handle h4 {
+  font-size: clamp(1rem, 0.96rem + 0.2vw, 1.2rem);
+  line-height: clamp(1.6rem, 1.56rem + 0.2vw, 1.8rem);
+  font-weight: 600;
+}
+
+.section-wrap .p-cont.open .outer-swipe .swiper-wrapper .swiper-slide .inner.web .inner-disc .cap-wrap .tech .env h4 ul,
+.section-wrap .p-cont.open .outer-swipe .swiper-wrapper .swiper-slide .inner.web .inner-disc .cap-wrap .tech .handle h4 ul {
+  padding-inline-start: initial !important;
+}
+
+.section-wrap .p-cont.open .outer-swipe .swiper-wrapper .swiper-slide .inner.web .inner-disc .cap-wrap .tech .env h4 ul li,
+.section-wrap .p-cont.open .outer-swipe .swiper-wrapper .swiper-slide .inner.web .inner-disc .cap-wrap .tech .handle h4 ul li {
+  font-size: clamp(1.2rem, 1.16rem + 0.2vw, 1.4rem);
+  font-weight: 500;
+}
+
+.section-wrap .p-cont.open .outer-swipe .swiper-wrapper .swiper-slide .inner.web .inner-disc .cap-wrap .cap {
+  width: 50%;
+  max-width: 100%;
+  padding: clamp(0.5rem, 0.4rem + 0.5vw, 1rem);
+}
+
+.section-wrap .p-cont.open .outer-swipe .swiper-wrapper .swiper-slide .inner.web .inner-disc .cap-wrap .cap p {
+  font-size: clamp(1rem, 0.96rem + 0.2vw, 1.2rem);
+}
+
+@media screen and (max-width: 780px) {
+  .section-wrap .p-cont.open .outer-swipe .swiper-wrapper .swiper-slide .inner.web .inner-disc {
+    height: 60%;
+  }
+  .section-wrap .p-cont.open .outer-swipe .swiper-wrapper .swiper-slide .inner.web .inner-disc .cap-wrap {
+    flex-direction: column;
+  }
+  .section-wrap .p-cont.open .outer-swipe .swiper-wrapper .swiper-slide .inner.web .inner-disc .cap-wrap .tech {
+    width: 100%;
+  }
+  .section-wrap .p-cont.open .outer-swipe .swiper-wrapper .swiper-slide .inner.web .inner-disc .cap-wrap .cap {
+    width: 100%;
+  }
+}
+
+.section-wrap .p-cont.open .outer-swipe .swiper-wrapper .swiper-slide .inner.illust {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  border: purple solid 0.5px;
+  padding: clamp(0.5rem, 0.4rem + 0.5vw, 1rem);
+}
+
+.section-wrap .p-cont.open .outer-swipe .swiper-wrapper .swiper-slide .inner.illust .inner-img {
+  width: 60%;
+  height: 50%;
+  border: red solid 0.5px;
+}
+
+.section-wrap .p-cont.open .outer-swipe .swiper-wrapper .swiper-slide .inner.illust .inner-disc {
+  width: 40%;
+  height: 50%;
+  border: blue solid 0.5px;
+}
+
+.section-wrap .p-cont.open .outer-swipe .swiper-wrapper .swiper-slide .inner.illust .inner-swipe {
+  width: 100%;
+  height: 50%;
+  border: yellow solid 0.5px;
+  overflow: hidden;
+}
+
+.section-wrap .p-cont.open .outer-swipe .swiper-wrapper .swiper-slide .inner.illust .inner-swipe .swiper-wrapper .swiper-slide {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 100%;
+}
+
+.section-wrap .p-cont.open .outer-swipe .swiper-wrapper .swiper-slide .inner.illust .inner-swipe .swiper-wrapper .swiper-slide img {
+  width: 100%;
+  max-width: 100%;
+  object-fit: contain;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 1200px) {
+  .section-wrap .p-cont.open .outer-swipe {
+    width: 75%;
+    aspect-ratio: 2 / 2.5;
+  }
+  .section-wrap .p-cont.open .outer-swipe .swiper-wrapper .swiper-slide .inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+  }
+  .section-wrap .p-cont.open .outer-swipe .swiper-wrapper .swiper-slide .inner .inner-img {
+    width: 100%;
+    max-width: 100%;
+    height: 25%;
+  }
+  .section-wrap .p-cont.open .outer-swipe .swiper-wrapper .swiper-slide .inner .inner-disc {
+    width: 100%;
+    max-width: 100%;
+    height: 25%;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .section-wrap .p-cont.open .outer-swipe {
+    width: 85%;
+    aspect-ratio: 9 / 16;
+  }
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: #325a8f !important;
+  position: absolute !important;
+  top: 25% !important;
 }
