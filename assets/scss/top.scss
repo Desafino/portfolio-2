@@ -149,287 +149,344 @@
     border-left: $prime solid 2px;
     border-right: $prime solid 2px;
     transition: all ease-in-out 0.45s;
-    .outer-swipe {
-      position: relative;
-      overflow: hidden;
-    }
-    &.open {
-      height: 100vh;
-      max-height: 100%;
-      padding: #{"clamp(1rem, 0.8rem + 1vw, 2rem)"};
-      opacity: 1;
+    
       .outer-swipe {
-        width: 65%;
-        aspect-ratio: 4 / 3;
+        position: relative;
         overflow: hidden;
-        .swiper-wrapper {
-          .swiper-slide {
-            width: 100%;
-            max-width: 100%;
-            .inner {
+      }
+
+      &.open {
+        height: 100vh;
+        max-height: 100%;
+        padding: #{"clamp(1rem, 0.8rem + 1vw, 2rem)"};
+        opacity: 1;
+        .outer-swipe {
+          width: 98rem;
+          max-width: 100%;
+          height: 85%;
+          max-height: 100%;
+          // aspect-ratio: 4 / 3;
+          overflow: hidden;
+          .swiper-wrapper {
+            .swiper-slide {
               width: 100%;
               max-width: 100%;
-              height: 100%;
-              max-height: 100%;
-              &.web {
-                @include fCol(center, center);
-                  .inner-img {
-                    @include fCol(center, center);
+              .inner {
+                width: 100%;
+                max-width: 100%;
+                height: 100%;
+                max-height: 100%;
+                &.web {
+                  @include fCol(center, center);
+                    .inner-img {
+                      @include fCol(center, center);
+                      width: 100%;
+                      height: 50%;
+                      padding: 1rem;
+                      // background-color: $white;
+                      img {
+                        max-height: 100%;
+                        aspect-ratio: 16 / 9;
+                      }
+                      // tablet
+                      @include tablet {
+                        height: 40%;
+                      }
+                    }
+              
+                  .inner-disc {
                     width: 100%;
                     height: 50%;
-                    padding: 1rem;
                     // background-color: $white;
-                    img {
-                      max-height: 100%;
-                      aspect-ratio: 16 / 9;
+                    padding: #{"clamp(0.5rem, 0.44rem + 0.3vw, 0.8rem)"};
+                    h3 {
+                      // font-size: #{"clamp(1.4rem, 1.36rem + 0.2vw, 1.6rem)"};
+                      font-size: 2.4rem;
+                      font-weight: 500;
+                      line-height: 3rem;
+                      margin-bottom: #{"clamp(0.5rem, 0.44rem + 0.3vw, 0.8rem)"};
+                      a {
+                        color: $prime;
+                        transition: all ease-in-out .45s;
+                        &:hover {
+                          color: $red;
+                        } 
+                      }
                     }
-                    // tablet
-                    @include tablet {
-                      height: 40%;
-                    }
-                  }
-            
-                .inner-disc {
-                  width: 100%;
-                  height: 50%;
-                  // background-color: $white;
-                  padding: #{"clamp(0.5rem, 0.44rem + 0.3vw, 0.8rem)"};
-                  h3 {
-                    font-size: #{"clamp(1.4rem, 1.36rem + 0.2vw, 1.6rem)"};
-                    font-weight: 500;
-                    line-height: 2.3rem;
-                    margin-bottom: #{"clamp(0.5rem, 0.44rem + 0.3vw, 0.8rem)"};
-                    a {
-                      color: $prime;
-                      transition: all ease-in-out .45s;
-                      &:hover {
-                        color: $red;
-                      } 
-                    }
-                  }
-                  .cap-wrap {
-                    @include fRow(flex-start, flex-start);
-                    .tech {
-                      @include fRow(center, flex-start);
-                      width: 50%;
-                      max-width: 100%;
-                      .env,
-                      .handle {
+                    .cap-wrap {
+                      @include fRow(flex-start, flex-start);
+                      .tech {
+                        @include fRow(center, flex-start);
                         width: 50%;
                         max-width: 100%;
-                        margin-left: 2rem;
-                        h4 {
-                          font-size: #{"clamp(1rem, 0.96rem + 0.2vw, 1.2rem)"};
-                          line-height: #{"clamp(1.6rem, 1.56rem + 0.2vw, 1.8rem)"};
-                          font-weight: 600;
+                        .env {
+                          width: 50%;
+                          max-width: 100%;
+                          margin-left: 2rem;
+                          h4 {
+                            font-size: 1.6rem;
+                            line-height: 2.4rem;
+                            font-weight: 600;
+                          }
                           ul {
                             padding-inline-start: initial !important;
                             li {
-                              font-size: #{"clamp(1.2rem, 1.16rem + 0.2vw, 1.4rem)"};
+                              font-size: 1.4rem;
                               font-weight: 500;
+                              margin-bottom: 0.7rem;
+                            }
+                          }
+                        }
+                        .handle {
+                          width: 50%;
+                          max-width: 100%;
+                          margin-left: 2rem;
+                          h4 {
+                            font-size: 1.6rem;
+                            line-height: 2.4rem;
+                            font-weight: 600;
+                          }
+                          ul {
+                            padding-inline-start: initial !important;
+                            li {
+                              // font-size: #{"clamp(1.2rem, 1.16rem + 0.2vw, 1.4rem)"};
+                              font-size: 1.4rem;
+                              font-weight: 500;
+                              margin-bottom: 0.7rem;
                             }
                           }
                         }
                       }
-                    }
-                    .cap {
-                      width: 50%;
-                      max-width: 100%;
-                      padding: #{"clamp(0.5rem, 0.4rem + 0.5vw, 1rem)"};
-                      p {
-                        font-size: #{"clamp(1rem, 0.96rem + 0.2vw, 1.2rem)"};
-                        line-height: 1.8rem;
-                      }
-                    }
-                  }
-                  // tablet
-                  @include tablet {
-                    height: 60%;
-                    .cap-wrap {
-                      flex-direction: column;
-                      .tech {
-                        width: 100%;
-                      }
                       .cap {
-                        width: 100%;
-                      }
-                    }
-                  }
-                }
-              }
-              &.illust {
-                @include fRow(flex-start, flex-start);
-                flex-wrap: wrap;
-                // border: purple solid 0.5px;
-                padding: #{"clamp(0.5rem, 0.4rem + 0.5vw, 1rem)"};
-                .inner-img {
-                  @include fCol(center, center);
-                  width: 55%;
-                  height: 50%;
-                  padding: 1rem;
-                  // border: red solid 0.5px;
-                  img {
-                    max-height: 100%;
-                  }
-                }
-                .inner-disc {
-                  width: 45%;
-                  height: 50%;
-                  h3 {
-                    font-size: #{"clamp(1.4rem, 1.36rem + 0.2vw, 1.6rem)"};
-                    font-weight: 500;
-                    line-height: 2.3rem;
-                    margin-bottom: #{"clamp(0.5rem, 0.44rem + 0.3vw, 0.8rem)"};
-                  }
-                  ul {
-                    li {
-                      font-size: #{"clamp(1rem, 0.96rem + 0.2vw, 1.2rem)"};
-                    }
-                  }
-                }
-                .inner-swipe {
-                  display: block;
-                  width: 100%;
-                  height: 50%;
-                  // border: yellow solid 0.5px;
-                  overflow: hidden;
-                  .swiper-wrapper {
-                    .swiper-slide {
-                      @include fCol(center, center);
-                      width: 100%;
-                      max-width: 100%;
-                      // overflow: hidden;
-                      img {
-                        width: 100%;
+                        width: 50%;
                         max-width: 100%;
-                        object-fit: contain;
-                        overflow: hidden;
+                        padding: #{"clamp(0.5rem, 0.4rem + 0.5vw, 1rem)"};
+                        p {
+                          // font-size: #{"clamp(1rem, 0.96rem + 0.2vw, 1.2rem)"};
+                          font-size: 1.4rem;
+                          line-height: 2.4rem;
+                        }
+                      }
+                    }
+                    // tablet
+                    @include tablet {
+                      height: 60%;
+                      .cap-wrap {
+                        flex-direction: column;
+                        .tech {
+                          width: 100%;
+                        }
+                        .cap {
+                          width: 100%;
+                        }
                       }
                     }
                   }
                 }
-              }
-              &.video {
-                @include fCol(flex-start, center);
-                // border: red solid 0.5px;
-                .video-area {
-                  position: relative;
-                  width: 100%;
-                  // height: 0;
-                  // padding-bottom: 56.25%;
-                  //動画比率が16:9なので56.25%となります
-                  aspect-ratio: 16 / 9;
-                  overflow: hidden;
-                  margin-bottom: 1rem;
-                  iframe {
-                    width: 100%;
-                    height: 100%;
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                  }
-                  video {
-                    width: 100%;
-                    height: 100%;
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                  }
-                }
-                .v-title {
-                  width: 100%;
-                  h3 {
-                    font-size: #{"clamp(1.6rem, 1.56rem + 0.2vw, 1.8rem)"};
-                    font-weight: 500;
-                    margin: 0 1.5rem 1rem 1.5rem;
-                  }
-                }
-                .disc-area {
+                &.illust {
                   @include fRow(flex-start, flex-start);
-                  width: 100%;
-                  margin: 1rem 2rem;
-                  height: 30%;
-                  // border: blue solid 0.5px;
-                  .tech-side {
+                  flex-wrap: wrap;
+                  // border: purple solid 0.5px;
+                  padding: #{"clamp(0.5rem, 0.4rem + 0.5vw, 1rem)"};
+                  .inner-img {
+                    @include fCol(center, center);
                     width: 50%;
-                    max-width: 100%;
-                    margin: 0 2rem;
-                    h4 {
-                      font-size: #{"clamp(1.2rem, 1.16rem + 0.2vw, 1.4rem)"};
-                      font-weight: 600;
-                      line-height: initial;
+                    height: 50%;
+                    padding: 1rem;
+                    // border: red solid 0.5px;
+                    img {
+                      max-height: 100%;
+                    }
+                  }
+                  .inner-disc {
+                    width: 50%;
+                    height: 50%;
+                    padding: 1rem;
+                    h3 {
+                      // font-size: #{"clamp(1.4rem, 1.36rem + 0.2vw, 1.6rem)"};
+                      font-size: 2.4rem;
+                      font-weight: 500;
+                      line-height: 3rem;
+                      margin-bottom: #{"clamp(0.5rem, 0.44rem + 0.3vw, 0.8rem)"};
                     }
                     ul {
                       li {
-                        font-size: #{"clamp(1rem, 0.96rem + 0.2vw, 1.2rem)"};
-                        font-weight: 500;
+                        // font-size: #{"clamp(1rem, 0.96rem + 0.2vw, 1.2rem)"};
+                        font-size: 1.4rem;
+                        margin-bottom: 0.7rem;
                       }
                     }
                   }
-                  .cap-side {
-                    width: 50%;
-                    max-width: 100%;
-                    p {
-                      font-size: #{"clamp(1rem, 0.96rem + 0.2vw, 1.2rem)"};
-                      line-height: 1.8rem;
+                  .inner-swipe {
+                    display: block;
+                    width: 100%;
+                    height: 50%;
+                    // border: yellow solid 0.5px;
+                    overflow: hidden;
+                    .swiper-wrapper {
+                      .swiper-slide {
+                        @include fCol(center, center);
+                        width: 100%;
+                        max-width: 100%;
+                        // overflow: hidden;
+                        img {
+                          width: 100%;
+                          max-width: 100%;
+                          object-fit: contain;
+                          overflow: hidden;
+                        }
+                      }
                     }
                   }
-                  .tech-side {
+                }
+                &.video {
+                  @include fCol(flex-start, center);
+                  // border: red solid 0.5px;
+                  .video-area {
+                    position: relative;
                     width: 100%;
+                    // height: 0;
+                    // padding-bottom: 56.25%;
+                    //動画比率が16:9なので56.25%となります
+                    aspect-ratio: 16 / 9;
+                    overflow: hidden;
+                    margin-bottom: 1rem;
+                    iframe {
+                      width: 100%;
+                      height: 100%;
+                      position: absolute;
+                      top: 0;
+                      left: 0;
+                    }
+                    video {
+                      width: 100%;
+                      height: 100%;
+                      position: absolute;
+                      top: 0;
+                      left: 0;
+                    }
                   }
-                  .cap-side {
+                  .v-title {
                     width: 100%;
+                    h3 {
+                      // font-size: #{"clamp(1.6rem, 1.56rem + 0.2vw, 1.8rem)"};
+                      font-size: 2.4rem;
+                      font-weight: 500;
+                      line-height: 3rem;
+                      margin: 0 1.5rem 1rem 1.5rem;
+                    }
                   }
-                  //tabPro
-                  @include tabPro {
-                    height: 40%;
-                  }
-                  // tablet
-                  @include tabPro {
-                    flex-direction: column;
-                    height: 50%;
+                  .disc-area {
+                    @include fRow(flex-start, flex-start);
+                    width: 100%;
+                    margin: 1rem 2rem;
+                    height: 30%;
+                    // border: blue solid 0.5px;
+                    .tech-side {
+                      width: 50%;
+                      max-width: 100%;
+                      margin: 0 2rem;
+                      h4 {
+                        // font-size: #{"clamp(1.2rem, 1.16rem + 0.2vw, 1.4rem)"};
+                        font-size: 1.6rem;
+                        font-weight: 600;
+                        line-height: initial;
+                      }
+                      ul {
+                        li {
+                          // font-size: #{"clamp(1rem, 0.96rem + 0.2vw, 1.2rem)"};
+                          font-size: 1.4rem;
+                          font-weight: 500;
+                          margin-bottom: 0.7rem;
+                        }
+                      }
+                    }
+                    .cap-side {
+                      width: 50%;
+                      max-width: 100%;
+                      p {
+                        // font-size: #{"clamp(1rem, 0.96rem + 0.2vw, 1.2rem)"};
+                        font-size: 1.4rem;
+                        line-height: 2.4rem;
+                      }
+                    }
                     .tech-side {
                       width: 100%;
                     }
                     .cap-side {
                       width: 100%;
                     }
+                    //tabPro
+                    @include tabPro {
+                      height: 40%;
+                    }
+                    // tablet
+                    @include tabPro {
+                      flex-direction: column;
+                      height: 50%;
+                      .tech-side {
+                        width: 100%;
+                      }
+                      .cap-side {
+                        width: 100%;
+                      }
+                    }
+                  }
+                }
+                &.other {
+                  @include fCol(center, center);
+                  .other-wrap {
+                    @include fCol(center, center);
+                    width: 100%;
+                    max-width: 78rem;
+                    height: 100%;
+                    h3 {
+                      font-size: #{"clamp(2.8rem, 2.509rem + 1.45vw, 3.6rem)"};
+                      font-weight: 600;
+                      border-bottom: none;
+                      margin-bottom: 3rem;
+                    }
+                    .other-main {
+                      img {
+                        width: 100%;
+                        max-width: 48rem;
+                      }
+                    }
                   }
                 }
               }
             }
           }
-        }
-        // tabPro
-        @include tabPro {
-          width: 75%;
-          aspect-ratio: 2 / 2.5;
-          .swiper-wrapper {
-            .swiper-slide {
-              .inner {
-                @include fCol(center, center);
-                flex-wrap: nowrap;
-                .inner-img {
-                  width: 100%;
-                  max-width: 100%;
-                  height: 25%;
-                }
-                .inner-disc {
-                  width: 100%;
-                  max-width: 100%;
-                  height: 25%;
+          // tabPro
+          @include tabPro {
+            width: 75%;
+            aspect-ratio: 2 / 2.5;
+            .swiper-wrapper {
+              .swiper-slide {
+                .inner {
+                  @include fCol(center, center);
+                  flex-wrap: nowrap;
+                  .inner-img {
+                    width: 100%;
+                    max-width: 100%;
+                    height: 25%;
+                  }
+                  .inner-disc {
+                    width: 100%;
+                    max-width: 100%;
+                    height: 25%;
+                  }
                 }
               }
             }
           }
-        }
-        // sp
-        @include sp {
-          width: 85%;
-          aspect-ratio: 9 / 16;
+          // sp
+          @include sp {
+            width: 95%;
+            //aspect-ratio: 9 / 16;
+          }
         }
       }
-    }
   }
 }
 

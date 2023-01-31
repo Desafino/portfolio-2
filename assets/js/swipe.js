@@ -22,7 +22,7 @@
     spaceBetween: 15, //スライド間の距離を16pxに
 
     mousewheel: {
-      invert: true,
+      invert: false,
     },
 
     breakpoints: {

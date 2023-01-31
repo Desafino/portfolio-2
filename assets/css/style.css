@@ -330,8 +330,10 @@ img {
 }
 
 .section-wrap .p-cont.open .outer-swipe {
-  width: 65%;
-  aspect-ratio: 4 / 3;
+  width: 98rem;
+  max-width: 100%;
+  height: 85%;
+  max-height: 100%;
   overflow: hidden;
 }
 
@@ -382,9 +384,9 @@ img {
 }
 
 .section-wrap .p-cont.open .outer-swipe .swiper-wrapper .swiper-slide .inner.web .inner-disc h3 {
-  font-size: clamp(1.4rem, 1.36rem + 0.2vw, 1.6rem);
+  font-size: 2.4rem;
   font-weight: 500;
-  line-height: 2.3rem;
+  line-height: 3rem;
   margin-bottom: clamp(0.5rem, 0.44rem + 0.3vw, 0.8rem);
 }
 
@@ -413,29 +415,48 @@ img {
   max-width: 100%;
 }
 
-.section-wrap .p-cont.open .outer-swipe .swiper-wrapper .swiper-slide .inner.web .inner-disc .cap-wrap .tech .env,
+.section-wrap .p-cont.open .outer-swipe .swiper-wrapper .swiper-slide .inner.web .inner-disc .cap-wrap .tech .env {
+  width: 50%;
+  max-width: 100%;
+  margin-left: 2rem;
+}
+
+.section-wrap .p-cont.open .outer-swipe .swiper-wrapper .swiper-slide .inner.web .inner-disc .cap-wrap .tech .env h4 {
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  font-weight: 600;
+}
+
+.section-wrap .p-cont.open .outer-swipe .swiper-wrapper .swiper-slide .inner.web .inner-disc .cap-wrap .tech .env ul {
+  padding-inline-start: initial !important;
+}
+
+.section-wrap .p-cont.open .outer-swipe .swiper-wrapper .swiper-slide .inner.web .inner-disc .cap-wrap .tech .env ul li {
+  font-size: 1.4rem;
+  font-weight: 500;
+  margin-bottom: 0.7rem;
+}
+
 .section-wrap .p-cont.open .outer-swipe .swiper-wrapper .swiper-slide .inner.web .inner-disc .cap-wrap .tech .handle {
   width: 50%;
   max-width: 100%;
   margin-left: 2rem;
 }
 
-.section-wrap .p-cont.open .outer-swipe .swiper-wrapper .swiper-slide .inner.web .inner-disc .cap-wrap .tech .env h4,
 .section-wrap .p-cont.open .outer-swipe .swiper-wrapper .swiper-slide .inner.web .inner-disc .cap-wrap .tech .handle h4 {
-  font-size: clamp(1rem, 0.96rem + 0.2vw, 1.2rem);
-  line-height: clamp(1.6rem, 1.56rem + 0.2vw, 1.8rem);
+  font-size: 1.6rem;
+  line-height: 2.4rem;
   font-weight: 600;
 }
 
-.section-wrap .p-cont.open .outer-swipe .swiper-wrapper .swiper-slide .inner.web .inner-disc .cap-wrap .tech .env h4 ul,
-.section-wrap .p-cont.open .outer-swipe .swiper-wrapper .swiper-slide .inner.web .inner-disc .cap-wrap .tech .handle h4 ul {
+.section-wrap .p-cont.open .outer-swipe .swiper-wrapper .swiper-slide .inner.web .inner-disc .cap-wrap .tech .handle ul {
   padding-inline-start: initial !important;
 }
 
-.section-wrap .p-cont.open .outer-swipe .swiper-wrapper .swiper-slide .inner.web .inner-disc .cap-wrap .tech .env h4 ul li,
-.section-wrap .p-cont.open .outer-swipe .swiper-wrapper .swiper-slide .inner.web .inner-disc .cap-wrap .tech .handle h4 ul li {
-  font-size: clamp(1.2rem, 1.16rem + 0.2vw, 1.4rem);
+.section-wrap .p-cont.open .outer-swipe .swiper-wrapper .swiper-slide .inner.web .inner-disc .cap-wrap .tech .handle ul li {
+  font-size: 1.4rem;
   font-weight: 500;
+  margin-bottom: 0.7rem;
 }
 
 .section-wrap .p-cont.open .outer-swipe .swiper-wrapper .swiper-slide .inner.web .inner-disc .cap-wrap .cap {
@@ -445,8 +466,8 @@ img {
 }
 
 .section-wrap .p-cont.open .outer-swipe .swiper-wrapper .swiper-slide .inner.web .inner-disc .cap-wrap .cap p {
-  font-size: clamp(1rem, 0.96rem + 0.2vw, 1.2rem);
-  line-height: 1.8rem;
+  font-size: 1.4rem;
+  line-height: 2.4rem;
 }
 
 @media screen and (max-width: 780px) {
@@ -478,7 +499,7 @@ img {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 55%;
+  width: 50%;
   height: 50%;
   padding: 1rem;
 }
@@ -488,19 +509,21 @@ img {
 }
 
 .section-wrap .p-cont.open .outer-swipe .swiper-wrapper .swiper-slide .inner.illust .inner-disc {
-  width: 45%;
+  width: 50%;
   height: 50%;
+  padding: 1rem;
 }
 
 .section-wrap .p-cont.open .outer-swipe .swiper-wrapper .swiper-slide .inner.illust .inner-disc h3 {
-  font-size: clamp(1.4rem, 1.36rem + 0.2vw, 1.6rem);
+  font-size: 2.4rem;
   font-weight: 500;
-  line-height: 2.3rem;
+  line-height: 3rem;
   margin-bottom: clamp(0.5rem, 0.44rem + 0.3vw, 0.8rem);
 }
 
 .section-wrap .p-cont.open .outer-swipe .swiper-wrapper .swiper-slide .inner.illust .inner-disc ul li {
-  font-size: clamp(1rem, 0.96rem + 0.2vw, 1.2rem);
+  font-size: 1.4rem;
+  margin-bottom: 0.7rem;
 }
 
 .section-wrap .p-cont.open .outer-swipe .swiper-wrapper .swiper-slide .inner.illust .inner-swipe {
@@ -562,8 +585,9 @@ img {
 }
 
 .section-wrap .p-cont.open .outer-swipe .swiper-wrapper .swiper-slide .inner.video .v-title h3 {
-  font-size: clamp(1.6rem, 1.56rem + 0.2vw, 1.8rem);
+  font-size: 2.4rem;
   font-weight: 500;
+  line-height: 3rem;
   margin: 0 1.5rem 1rem 1.5rem;
 }
 
@@ -584,14 +608,15 @@ img {
 }
 
 .section-wrap .p-cont.open .outer-swipe .swiper-wrapper .swiper-slide .inner.video .disc-area .tech-side h4 {
-  font-size: clamp(1.2rem, 1.16rem + 0.2vw, 1.4rem);
+  font-size: 1.6rem;
   font-weight: 600;
   line-height: initial;
 }
 
 .section-wrap .p-cont.open .outer-swipe .swiper-wrapper .swiper-slide .inner.video .disc-area .tech-side ul li {
-  font-size: clamp(1rem, 0.96rem + 0.2vw, 1.2rem);
+  font-size: 1.4rem;
   font-weight: 500;
+  margin-bottom: 0.7rem;
 }
 
 .section-wrap .p-cont.open .outer-swipe .swiper-wrapper .swiper-slide .inner.video .disc-area .cap-side {
@@ -600,8 +625,8 @@ img {
 }
 
 .section-wrap .p-cont.open .outer-swipe .swiper-wrapper .swiper-slide .inner.video .disc-area .cap-side p {
-  font-size: clamp(1rem, 0.96rem + 0.2vw, 1.2rem);
-  line-height: 1.8rem;
+  font-size: 1.4rem;
+  line-height: 2.4rem;
 }
 
 .section-wrap .p-cont.open .outer-swipe .swiper-wrapper .swiper-slide .inner.video .disc-area .tech-side {
@@ -631,6 +656,35 @@ img {
   }
 }
 
+.section-wrap .p-cont.open .outer-swipe .swiper-wrapper .swiper-slide .inner.other {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.section-wrap .p-cont.open .outer-swipe .swiper-wrapper .swiper-slide .inner.other .other-wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 78rem;
+  height: 100%;
+}
+
+.section-wrap .p-cont.open .outer-swipe .swiper-wrapper .swiper-slide .inner.other .other-wrap h3 {
+  font-size: clamp(2.8rem, 2.509rem + 1.45vw, 3.6rem);
+  font-weight: 600;
+  border-bottom: none;
+  margin-bottom: 3rem;
+}
+
+.section-wrap .p-cont.open .outer-swipe .swiper-wrapper .swiper-slide .inner.other .other-wrap .other-main img {
+  width: 100%;
+  max-width: 48rem;
+}
+
 @media screen and (max-width: 1200px) {
   .section-wrap .p-cont.open .outer-swipe {
     width: 75%;
@@ -657,8 +711,7 @@ img {
 
 @media screen and (max-width: 560px) {
   .section-wrap .p-cont.open .outer-swipe {
-    width: 85%;
-    aspect-ratio: 9 / 16;
+    width: 95%;
   }
 }
 
